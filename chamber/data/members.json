@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Tech Solutions",
+            "address": "123 Main Street",
+            "phone": "011-123-4567",
+            "website": "https://techsolutions.com",
+            "image": "company1.jpg",
+            "membership": 3
+        },
+        {
+            "name": "Green Market",
+            "address": "45 Market Road",
+            "phone": "011-222-3333",
+            "website": "https://greenmarket.com",
+            "image": "company2.jpg",
+            "membership": 2
+        },
+        {
+            "name": "Urban Fitness",
+            "address": "22 Fitness Ave",
+            "phone": "011-444-5678",
+            "website": "https://urbanfitness.com",
+            "image": "company3.jpg",
+            "membership": 1
+        },
+        {
+            "name": "City Bank",
+            "address": "10 Finance Street",
+            "phone": "011-987-6543",
+            "website": "https://citybank.com",
+            "image": "company4.jpg",
+            "membership": 3
+        },
+        {
+            "name": "Cafe Aroma",
+            "address": "78 Coffee Blvd",
+            "phone": "011-654-3210",
+            "website": "https://cafearoma.com",
+            "image": "company5.jpg",
+            "membership": 2
+        },
+        {
+            "name": "Bright Electronics",
+            "address": "15 Tech Park",
+            "phone": "011-789-1234",
+            "website": "https://brightelectronics.com",
+            "image": "company6.jpg",
+            "membership": 1
+        },
+        {
+            "name": "Sun Travel Agency",
+            "address": "90 Holiday Road",
+            "phone": "011-321-4567",
+            "website": "https://suntravel.com",
+            "image": "company7.jpg",
+            "membership": 2
+        }
+    ]
+}

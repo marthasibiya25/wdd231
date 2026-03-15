@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamber Directory</title>
+    <meta name="description" content="Business directory for the Chamber of Commerce">
+    <meta name="author" content="Mbali Arlleta">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:description" content="Explore businesses in our chamber community">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+
+    <script src="js/directory.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="Chamber Logo" class="logo">
+        <h1>City Chamber of Commerce</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Business Directory</h2>
+
+        <div class="view-buttons">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+
+        <section id="members" class="grid"></section>
+
+    </main>
+
+    <footer>
+
+        <p>Contact: info@citychamber.org | +27 11 555 5555</p>
+
+        <p>
+            © <span id="year"></span> Mbali Arlleta | WDD 231
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
