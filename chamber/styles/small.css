@@ -84,11 +84,10 @@ img {
 
 /* Company logo images */
 .company-logo {
-    width: 120px;
-    /* Fixed width for cards */
+    width: 100%;
+    max-width: 150px;
     height: auto;
     object-fit: contain;
-    /* Keep original proportions */
     margin-bottom: 0.5rem;
 }
 

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,25 +12,28 @@
 
     <meta name="author" content="Martha Sibiya">
 
-    <link rel="icon" href="../chamber/images/logo2.png" type="image/svg+xml">
+    <link rel="icon" href="../chamber/images/logo2.png" type="image/png">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- Open Graph Meta -->
     <meta property="og:title" content="Chamber Business Directory | Martha Sibiya">
     <meta property="og:description"
         content="Browse the Chamber of Commerce directory to discover local businesses and services in the community.">
-    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/images/logo2.png">
+    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/chamber/images/logo2.png">
     <meta property="og:url" content="https://marthasibiya25.github.io/wdd231/chamber/directory.html">
 
+    <!-- JS -->
     <script src="scripts/directory.js" defer></script>
-
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
@@ -40,25 +42,32 @@
         <h1>City Chamber of Commerce</h1>
     </header>
 
-    <main>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
+    <main>
         <h2>Business Directory</h2>
 
-        <button id="grid">Grid</button>
-        <button id="list">List</button>
+        <div class="view-buttons">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
 
-        <section id="members" class="grid"></section>
-
+        <section id="members" class="grid">
+            <!-- Member cards populated dynamically with directory.js -->
+        </section>
     </main>
 
     <footer>
-
         <p>Contact: info@chamber.org</p>
-
         <p>© <span id="year"></span> Martha Sibiya | WDD231</p>
-
         <p id="lastModified"></p>
-
     </footer>
 
 </body>
