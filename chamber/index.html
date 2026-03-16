@@ -1,101 +1,101 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>City Chamber of Commerce | Home</title>
     <meta name="description"
         content="Welcome to the City Chamber of Commerce. Connect with local businesses, discover events, and explore our member directory.">
     <meta name="author" content="Martha Sibiya">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/logo2.png" type="image/png" width="40">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="City Chamber of Commerce | Home">
-    <meta property="og:description"
-        content="Connect with local businesses, explore events, and see our featured members.">
-    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/chamber/images/logo.png">
-    <meta property="og:url" content="https://marthasibiya25.github.io/wdd231/chamber/index.html">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="images/logo2.png" type="image/png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="City Chamber of Commerce | Home">
+    <meta property="og:description"
+        content="Connect with local businesses, explore events, and see our featured members.">
+    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://marthasibiya25.github.io/wdd231/chamber/index.html">
+
     <!-- JS -->
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
+    <!-- Header with logo and navigation -->
     <header>
         <img src="images/logo2.png" alt="City Chamber Logo" class="logo">
-        <span class="site-name">City Chamber of Commerce</span>
+        <h1>City Chamber of Commerce</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Join the Chamber</a></li>
+                <li><a href="https://github.com/marthasibiya25" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Main H1 for content -->
+        <h1>Welcome to the City Chamber of Commerce</h1>
+
         <!-- Hero Section -->
-        <section class="hero">
-            <img src="images/hero.png" alt="City skyline hero image">
-            <div class="cta">
-                <a href="#" class="btn-join">Join the Chamber</a>
-            </div>
+        <section id="hero">
+            <img src="images/hero.png" alt="City skyline hero image" class="hero-image">
+            <p>Connecting local businesses and the community.</p>
+            <a href="#" class="cta-button">Join the Chamber</a>
         </section>
 
         <!-- Current Events Section -->
-        <section class="events">
+        <section id="events">
             <h2>Current Events</h2>
-            <p>Check out upcoming business networking events and community programs in our city.</p>
+            <ul>
+                <li>Community Networking Meetup – 22 March 2026</li>
+                <li>Annual Business Awards – 10 April 2026</li>
+            </ul>
         </section>
 
         <!-- Weather Section -->
-        <section class="weather">
-            <h2>Weather</h2>
-            <div id="current-weather">
-                <p id="temp"></p>
-                <p id="description"></p>
+        <section id="weather">
+            <h2>Weather in City</h2>
+            <div id="weather-info">
+                <!-- Populated by weather.js -->
             </div>
-            <div id="forecast"></div>
         </section>
 
         <!-- Spotlight Members Section -->
-        <section class="spotlights">
+        <section id="spotlight">
             <h2>Featured Members</h2>
-            <div id="spotlight-container">
-                <!-- JS will populate spotlight cards here -->
+            <div id="spotlight-members" class="spotlight-grid">
+                <!-- Populated by spotlight.js -->
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Martha Sibiya | WDD 231</p>
-        <p>Last modified: <span id="lastModified"></span></p>
-        <p>
-            <a href="https://github.com/marthasibiya25" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </p>
+        <p>Contact: info@chamber.org</p>
+        <p>© <span id="year"></span> Martha Sibiya | WDD231</p>
+        <p id="lastModified"></p>
     </footer>
-
-    <script>
-        // Dynamic copyright & last modified
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = document.lastModified;
-    </script>
 </body>
 
 </html>

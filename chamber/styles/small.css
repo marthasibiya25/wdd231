@@ -72,6 +72,17 @@ img {
     display: block;
 }
 
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
 /* Hero image for home page */
 .hero-img {
     width: 100%;
