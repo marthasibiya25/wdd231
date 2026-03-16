@@ -1,7 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 header {
@@ -21,6 +20,17 @@ nav.open {
     display: block;
 }
 
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+}
+
 main {
     padding: 1rem;
 }
@@ -29,6 +39,13 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-top: 1rem;
+}
+
+#courses div {
+    padding: 1rem;
+    background: #ddd;
+    text-align: center;
 }
 
 .completed {
@@ -40,5 +57,11 @@ footer {
     text-align: center;
     padding: 1rem;
     background: #222;
+    color: white;
+    margin-top: 2rem;
+}
+
+.social a {
+    margin: .5rem;
     color: white;
 }

@@ -18,7 +18,6 @@ function displayCourses(list) {
     list.forEach(course => {
 
         const card = document.createElement("div");
-
         card.textContent = course.code;
 
         if (course.completed) {
@@ -31,19 +30,16 @@ function displayCourses(list) {
 
     const totalCredits = list.reduce((sum, course) => sum + course.credits, 0);
 
-    creditDisplay.textContent = `Total Credits: ${totalCredits}`;
+    creditDisplay.textContent = "Total Credits: " + totalCredits;
+
 }
 
 displayCourses(courses);
 
-document.querySelector("#all").addEventListener("click", () => {
-    displayCourses(courses);
-});
+document.querySelector("#all").onclick = () => displayCourses(courses);
 
-document.querySelector("#wdd").addEventListener("click", () => {
-    displayCourses(courses.filter(c => c.subject === "WDD"));
-});
+document.querySelector("#wdd").onclick =
+    () => displayCourses(courses.filter(c => c.subject === "WDD"));
 
-document.querySelector("#cse").addEventListener("click", () => {
-    displayCourses(courses.filter(c => c.subject === "CSE"));
-});
+document.querySelector("#cse").onclick =
+    () => displayCourses(courses.filter(c => c.subject === "CSE"));

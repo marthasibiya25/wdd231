@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width:768px) {
 
     nav {
         display: block;
@@ -10,8 +10,7 @@
 
     nav ul {
         display: flex;
-        gap: 1rem;
-        list-style: none;
+        gap: 2rem;
     }
 
     #courses {
