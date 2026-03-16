@@ -72,25 +72,51 @@ img {
     display: block;
 }
 
+/* Logo styling */
 .logo {
     width: 150px;
+    /* Resize logo */
     height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 1rem auto;
+    /* Center logo with spacing */
 }
 
+/* Hero image styling */
 .hero-image {
     width: 100%;
-    max-height: 500px;
+    /* Full width of container */
+    max-height: 400px;
+    /* Limit height */
     object-fit: cover;
+    /* Maintain aspect ratio and crop overflow */
+    display: block;
+    margin: 0 auto;
+    /* Center image */
 }
 
-/* Hero image for home page */
-.hero-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* Ensures it fills the container nicely */
+/* CTA button */
+.cta-button {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
-    /* Optional: small rounding */
+}
+
+.cta-button:hover {
+    background-color: #0055a5;
+}
+
+/* Center hero text */
+#hero p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 
 /* Company logo images */
