@@ -2,45 +2,27 @@
     "members": [
         {
             "name": "Tech Solutions",
-            "address": "12 Main St",
-            "phone": "0111111111",
-            "website": "https://example.com"
+            "membership": "Gold",
+            "phone": "123-456",
+            "address": "123 Main St",
+            "website": "https://example.com",
+            "image": "company1.png"
         },
         {
-            "name": "Green Market",
-            "address": "45 Market Rd",
-            "phone": "0222222222",
-            "website": "https://example.com"
+            "name": "Biz Corp",
+            "membership": "Silver",
+            "phone": "555-222",
+            "address": "45 Market St",
+            "website": "https://example.com",
+            "image": "company2.png"
         },
         {
-            "name": "Urban Fitness",
-            "address": "22 Gym Rd",
-            "phone": "0333333333",
-            "website": "https://example.com"
-        },
-        {
-            "name": "City Bank",
-            "address": "10 Finance St",
-            "phone": "0444444444",
-            "website": "https://example.com"
-        },
-        {
-            "name": "Cafe Aroma",
-            "address": "78 Coffee Blvd",
-            "phone": "0555555555",
-            "website": "https://example.com"
-        },
-        {
-            "name": "Bright Electronics",
-            "address": "15 Tech Park",
-            "phone": "0666666666",
-            "website": "https://example.com"
-        },
-        {
-            "name": "Sun Travel",
-            "address": "90 Holiday Rd",
-            "phone": "0777777777",
-            "website": "https://example.com"
+            "name": "Creative Studio",
+            "membership": "Gold",
+            "phone": "999-888",
+            "address": "78 Design Rd",
+            "website": "https://example.com",
+            "image": "company3.png"
         }
     ]
 }

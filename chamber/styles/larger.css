@@ -1,11 +1,12 @@
 @media (min-width: 768px) {
 
-    #members.grid {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .spotlight-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
-    nav ul {
-        gap: 2rem;
-    }
-
 }

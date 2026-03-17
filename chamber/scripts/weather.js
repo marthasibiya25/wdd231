@@ -1,22 +1,27 @@
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // replace with your key
-const city = 'Johannesburg,ZA';
+const apiKey = "YOUR_API_KEY"; // replace this
+const lat = -26.2041;
+const lon = 28.0473;
+
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
 async function getWeather() {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
+    const response = await fetch(url);
     const data = await response.json();
 
-    // Current weather
-    const current = data.list[0];
-    document.getElementById('temp').textContent = `Temp: ${current.main.temp}°C`;
-    document.getElementById('description').textContent = `Condition: ${current.weather[0].description}`;
+    const weatherDiv = document.getElementById("weather-info");
 
-    // 3-day forecast
-    let forecastHTML = '';
-    for (let i = 1; i <= 3; i++) {
-        const day = data.list[i * 8]; // 24-hour intervals
-        forecastHTML += `<p>${new Date(day.dt_txt).toLocaleDateString()}: ${day.main.temp}°C, ${day.weather[0].description}</p>`;
+    const temp = data.list[0].main.temp;
+    const desc = data.list[0].weather[0].description;
+
+    weatherDiv.innerHTML = `
+        <p>Temperature: ${temp}°C</p>
+        <p>Condition: ${desc}</p>
+        <h3>3-Day Forecast</h3>
+    `;
+
+    for (let i = 8; i <= 24; i += 8) {
+        weatherDiv.innerHTML += `<p>Day ${i / 8}: ${data.list[i].main.temp}°C</p>`;
     }
-    document.getElementById('forecast').innerHTML = forecastHTML;
 }
 
 getWeather();

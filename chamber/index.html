@@ -23,13 +23,6 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="City Chamber of Commerce | Home">
-    <meta property="og:description"
-        content="Connect with local businesses, explore events, and see our featured members.">
-    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/chamber/images/logo.png">
-    <meta property="og:url" content="https://marthasibiya25.github.io/wdd231/chamber/index.html">
-
     <!-- JS -->
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
@@ -37,36 +30,33 @@
 </head>
 
 <body>
-    <!-- Header with logo and navigation -->
+
     <header>
         <img src="images/logo2.png" alt="City Chamber Logo" class="logo">
         <h1>City Chamber of Commerce</h1>
+
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Join the Chamber</a></li>
-                <li><a href="https://github.com/marthasibiya25" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Main H1 for content -->
         <h1>Welcome to the City Chamber of Commerce</h1>
 
-        <!-- Hero Section -->
+        <!-- HERO -->
         <section id="hero">
-            <img src="images/hero.png" alt="City skyline during sunset, representing the Chamber of Commerce"
-                class="hero-image">
-            <p>Connecting local businesses and the community.</p>
-            <a href="#" class="cta-button" role="button">Join the Chamber</a>
+            <div class="hero-container">
+                <img src="images/hero.png" alt="City skyline during sunset" class="hero-image">
+                <a href="#" class="cta-button">Join the Chamber</a>
+            </div>
         </section>
 
-        <!-- Current Events Section -->
+        <!-- EVENTS -->
         <section id="events">
             <h2>Current Events</h2>
             <ul>
@@ -75,28 +65,25 @@
             </ul>
         </section>
 
-        <!-- Weather Section -->
+        <!-- WEATHER -->
         <section id="weather">
-            <h2>Weather in City</h2>
-            <div id="weather-info">
-                <!-- Populated by weather.js -->
-            </div>
+            <h2>Weather in Johannesburg</h2>
+            <div id="weather-info"></div>
         </section>
 
-        <!-- Spotlight Members Section -->
+        <!-- SPOTLIGHT -->
         <section id="spotlight">
             <h2>Featured Members</h2>
-            <div id="spotlight-members" class="spotlight-grid">
-                <!-- Populated by spotlight.js -->
-            </div>
+            <div id="spotlight-members" class="spotlight-grid"></div>
         </section>
     </main>
 
     <footer>
         <p>Contact: info@chamber.org</p>
-        <p>© <span id="year"></span> Martha Sibiya | WDD231</p>
+        <p>© <span id="year"></span> Martha Sibiya</p>
         <p id="lastModified"></p>
     </footer>
+
 </body>
 
 </html>

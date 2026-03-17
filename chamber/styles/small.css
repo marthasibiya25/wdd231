@@ -1,157 +1,106 @@
-/* ===================== */
-/* Base Styles           */
-/* ===================== */
+/* GENERAL */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    line-height: 1.6;
 }
 
 header {
     background: #003366;
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 1rem;
 }
 
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* NAVIGATION */
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    margin: 0;
 }
 
-nav a {
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+/* MAIN */
 main {
     padding: 1rem;
 }
 
-/* ===================== */
-/* Members Section       */
-/* ===================== */
-#members.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Single column for small screens */
-    gap: 1rem;
+/* HERO SECTION */
+.hero-container {
+    position: relative;
 }
 
-#members.list {
+.hero-image {
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-#members section {
+/* CTA BUTTON ON IMAGE */
+.cta-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+    margin: 20px 0;
+}
+
+/* EVENTS */
+#events ul {
+    padding-left: 20px;
+}
+
+/* WEATHER */
+#weather-info {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* SPOTLIGHT */
+.spotlight-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-grid div {
     border: 1px solid #ccc;
     padding: 1rem;
     text-align: center;
+    border-radius: 5px;
 }
 
-/* ===================== */
-/* Footer                */
-/* ===================== */
+.spotlight-grid img {
+    width: 100px;
+    height: auto;
+}
+
+/* FOOTER */
 footer {
     background: #003366;
     color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* ===================== */
-/* Image Styling         */
-/* ===================== */
-
-/* All images are responsive */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Logo styling */
-.logo {
-    width: 150px;
-    /* Resize logo */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto 1rem auto;
-    /* Center logo with spacing */
-}
-
-/* Hero image styling */
-.hero-image {
-    width: 100%;
-    /* Full width of container */
-    max-height: 400px;
-    /* Limit height */
-    object-fit: cover;
-    /* Maintain aspect ratio and crop overflow */
-    display: block;
-    margin: 0 auto;
-    /* Center image */
-}
-
-/* CTA button */
-.cta-button {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    margin-top: 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #0055a5;
-}
-
-/* Center hero text */
-#hero p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
-
-/* Company logo images */
-.company-logo {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 0.5rem;
-}
-
-/* Spotlight member card images */
-.spotlight-img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 0 auto;
-    /* Center in card */
-}
-
-/* ===================== */
-/* Responsive adjustments */
-/* ===================== */
-@media (max-width: 768px) {
-    #members.grid {
-        grid-template-columns: 1fr;
-        /* Single column on small screens */
-    }
-
-    .company-logo {
-        width: 80px;
-    }
-
-    .spotlight-img {
-        width: 150px;
-    }
 }

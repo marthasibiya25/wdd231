@@ -1,27 +1,32 @@
-async function loadSpotlights() {
-    const response = await fetch('data/members.json');
-    const members = await response.json();
+const url = "data/members.json";
 
-    // Filter gold & silver members
-    const featured = members.filter(m => m.membershipLevel === 2 || m.membershipLevel === 3);
+async function getSpotlights() {
+    const response = await fetch(url);
+    const data = await response.json();
 
-    // Randomly pick 2-3 members
-    const randomMembers = featured.sort(() => 0.5 - Math.random()).slice(0, 3);
-    const container = document.getElementById('spotlight-container');
+    const members = data.members.filter(
+        m => m.membership === "Gold" || m.membership === "Silver"
+    );
 
-    randomMembers.forEach(member => {
-        const card = document.createElement('div');
-        card.className = 'spotlight-card';
-        card.innerHTML = `
-            <img src="images/${member.image}" alt="${member.companyName} Logo">
-            <h3>${member.companyName}</h3>
-            <p>${member.address}</p>
+    const shuffled = members.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 3);
+
+    const container = document.getElementById("spotlight-members");
+
+    selected.forEach(member => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="images/${member.image}" alt="${member.name}">
             <p>${member.phone}</p>
-            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
-            <p>Membership Level: ${member.membershipLevel === 3 ? 'Gold' : 'Silver'}</p>
+            <p>${member.address}</p>
+            <a href="${member.website}" target="_blank">Visit</a>
+            <p>${member.membership}</p>
         `;
-        container.appendChild(card);
+
+        container.appendChild(div);
     });
 }
 
-loadSpotlights();
+getSpotlights();
