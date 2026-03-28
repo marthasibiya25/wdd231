@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join the Chamber | Martha Sibiya</title>
+
+    <meta name="description"
+        content="Apply to join the Chamber of Commerce and connect with local businesses and opportunities.">
+    <meta name="author" content="Martha Sibiya">
+
+    <link rel="icon" href="images/logo2.png">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo2.png" alt="Chamber Logo" class="logo">
+        <p class="site-name">City Chamber of Commerce</p>
+    </header>
+
+    <main>
+        <h1>Join the Chamber</h1>
+
+        <div class="join-container">
+
+            <!-- FORM -->
+            <form method="get" action="thankyou.html">
+
+                <label>First Name
+                    <input type="text" name="firstName" required autocomplete="given-name">
+                </label>
+
+                <label>Last Name
+                    <input type="text" name="lastName" required autocomplete="family-name">
+                </label>
+
+                <label>Organization Title
+                    <input type="text" name="orgTitle" pattern="[A-Za-z\\-\\s]{7,}" autocomplete="organization-title">
+                </label>
+
+                <label>Email
+                    <input type="email" name="email" required placeholder="example@email.com" autocomplete="email">
+                </label>
+
+                <label>Phone
+                    <input type="tel" name="phone" required autocomplete="tel">
+                </label>
+
+                <label>Business Name
+                    <input type="text" name="business" required autocomplete="organization">
+                </label>
+
+                <label>Membership Level
+                    <select name="membership">
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+
+                <label>Business Description
+                    <textarea name="description"></textarea>
+                </label>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Apply Now">
+
+            </form>
+
+            <!-- MEMBERSHIP CARDS -->
+            <div class="cards">
+
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <button onclick="openModal('npModal')">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Bronze</h3>
+                    <button onclick="openModal('bronzeModal')">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Silver</h3>
+                    <button onclick="openModal('silverModal')">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Gold</h3>
+                    <button onclick="openModal('goldModal')">View Benefits</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MODALS -->
+        <dialog id="npModal">
+            <p>Free membership for non-profits.</p>
+            <button onclick="closeModal('npModal')">Close</button>
+        </dialog>
+
+        <dialog id="bronzeModal">
+            <p>Basic listing and networking events.</p>
+            <button onclick="closeModal('bronzeModal')">Close</button>
+        </dialog>
+
+        <dialog id="silverModal">
+            <p>Includes training and promotions.</p>
+            <button onclick="closeModal('silverModal')">Close</button>
+        </dialog>
+
+        <dialog id="goldModal">
+            <p>Top-level advertising and spotlight features.</p>
+            <button onclick="closeModal('goldModal')">Close</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Martha Sibiya</p>
+    </footer>
+
+</body>
+
+</html>
