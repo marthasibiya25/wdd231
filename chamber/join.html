@@ -5,18 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Join the Chamber | Martha Sibiya</title>
+    <title>Join the City Chamber of Commerce | Martha Sibiya</title>
 
+    <!-- SEO -->
     <meta name="description"
-        content="Apply to join the Chamber of Commerce and connect with local businesses and opportunities.">
+        content="Apply to join the Chamber of Commerce and connect with local businesses and opportunities in Johannesburg.">
     <meta name="author" content="Martha Sibiya">
 
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Join the City Chamber of Commerce in Johannesburg">
+    <meta property="og:description"
+        content="Apply today to connect with businesses, attend events, and grow your network in Johannesburg.">
+    <meta property="og:image" content="https://marthasibiya25.github.io/wdd231/chamber/images/hero.png">
+    <meta property="og:url" content="https://marthasibiya25.github.io/wdd231/chamber/join.html">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/logo2.png">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- JS -->
     <script src="scripts/join.js" defer></script>
 </head>
 
@@ -25,42 +41,61 @@
     <header>
         <img src="images/logo2.png" alt="Chamber Logo" class="logo">
         <p class="site-name">City Chamber of Commerce</p>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <h1>Join the Chamber</h1>
 
-        <div class="join-container">
+        <div class="join-layout">
 
             <!-- FORM -->
             <form method="get" action="thankyou.html">
 
-                <label>First Name
-                    <input type="text" name="firstName" required autocomplete="given-name">
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" required title="Enter your first name"
+                        autocomplete="given-name">
                 </label>
 
-                <label>Last Name
-                    <input type="text" name="lastName" required autocomplete="family-name">
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" required title="Enter your last name" autocomplete="family-name">
                 </label>
 
-                <label>Organization Title
-                    <input type="text" name="orgTitle" pattern="[A-Za-z\\-\\s]{7,}" autocomplete="organization-title">
+                <label>
+                    Organization Title:
+                    <input type="text" name="orgTitle" title="Enter your job title" autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}">
                 </label>
 
-                <label>Email
-                    <input type="email" name="email" required placeholder="example@email.com" autocomplete="email">
+                <label>
+                    Email:
+                    <input type="email" name="email" required title="Enter a valid email"
+                        placeholder="example@email.com" autocomplete="email">
                 </label>
 
-                <label>Phone
-                    <input type="tel" name="phone" required autocomplete="tel">
+                <label>
+                    Phone:
+                    <input type="tel" name="phone" required title="Enter your phone number" autocomplete="tel">
                 </label>
 
-                <label>Business Name
-                    <input type="text" name="business" required autocomplete="organization">
+                <label>
+                    Organization Name:
+                    <input type="text" name="organization" required title="Enter your business name"
+                        autocomplete="organization">
                 </label>
 
-                <label>Membership Level
-                    <select name="membership">
+                <label>
+                    Membership Level:
+                    <select name="membership" title="Select membership level">
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze</option>
                         <option value="silver">Silver</option>
@@ -68,14 +103,15 @@
                     </select>
                 </label>
 
-                <label>Business Description
-                    <textarea name="description"></textarea>
+                <label>
+                    Description:
+                    <textarea name="description" title="Describe your organization"></textarea>
                 </label>
 
+                <!-- TIMESTAMP -->
                 <input type="hidden" id="timestamp" name="timestamp">
 
-                <input type="submit" value="Apply Now">
-
+                <button type="submit">Apply Now</button>
             </form>
 
             <!-- MEMBERSHIP CARDS -->
@@ -83,47 +119,46 @@
 
                 <div class="card">
                     <h3>NP Membership</h3>
-                    <button onclick="openModal('npModal')">View Benefits</button>
+                    <button class="open-btn" data-modal="#npModal">View Benefits</button>
                 </div>
 
                 <div class="card">
                     <h3>Bronze</h3>
-                    <button onclick="openModal('bronzeModal')">View Benefits</button>
+                    <button class="open-btn" data-modal="#bronzeModal">View Benefits</button>
                 </div>
 
                 <div class="card">
                     <h3>Silver</h3>
-                    <button onclick="openModal('silverModal')">View Benefits</button>
+                    <button class="open-btn" data-modal="#silverModal">View Benefits</button>
                 </div>
 
                 <div class="card">
                     <h3>Gold</h3>
-                    <button onclick="openModal('goldModal')">View Benefits</button>
+                    <button class="open-btn" data-modal="#goldModal">View Benefits</button>
                 </div>
 
             </div>
-
         </div>
 
         <!-- MODALS -->
         <dialog id="npModal">
             <p>Free membership for non-profits.</p>
-            <button onclick="closeModal('npModal')">Close</button>
+            <button class="close-btn">Close</button>
         </dialog>
 
         <dialog id="bronzeModal">
-            <p>Basic listing and networking events.</p>
-            <button onclick="closeModal('bronzeModal')">Close</button>
+            <p>Basic exposure and events.</p>
+            <button class="close-btn">Close</button>
         </dialog>
 
         <dialog id="silverModal">
-            <p>Includes training and promotions.</p>
-            <button onclick="closeModal('silverModal')">Close</button>
+            <p>More advertising and discounts.</p>
+            <button class="close-btn">Close</button>
         </dialog>
 
         <dialog id="goldModal">
-            <p>Top-level advertising and spotlight features.</p>
-            <button onclick="closeModal('goldModal')">Close</button>
+            <p>Premium spotlight and top benefits.</p>
+            <button class="close-btn">Close</button>
         </dialog>
 
     </main>

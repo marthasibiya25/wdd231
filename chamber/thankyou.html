@@ -4,19 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Thank You</title>
-    <link rel="stylesheet" href="styles/small.css">
-    <script src="scripts/thankyou.js" defer></script>
+    <script>
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+
+            document.getElementById("output").innerHTML = `
+        <p><strong>Name:</strong> ${params.get("firstName")} ${params.get("lastName")}</p>
+        <p><strong>Email:</strong> ${params.get("email")}</p>
+        <p><strong>Phone:</strong> ${params.get("phone")}</p>
+        <p><strong>Organization:</strong> ${params.get("organization")}</p>
+        <p><strong>Date:</strong> ${params.get("timestamp")}</p>
+    `;
+        }
+    </script>
 </head>
 
 <body>
-
-    <main>
-        <h1>Thank You for Applying!</h1>
-
-        <div id="output"></div>
-
-    </main>
-
+    <h1>Thank You for Joining!</h1>
+    <div id="output"></div>
 </body>
 
 </html>

@@ -1,14 +1,16 @@
-// timestamp
-document.getElementById("timestamp").value = new Date();
+// Timestamp
+document.getElementById("timestamp").value = new Date().toISOString();
 
-// modal functions
-function openModal(id) {
-    document.getElementById(id).showModal();
-}
+// Open modals
+document.querySelectorAll(".open-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector(btn.dataset.modal).showModal();
+    });
+});
 
-function closeModal(id) {
-    document.getElementById(id).close();
-}
-
-// footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+// Close modals
+document.querySelectorAll(".close-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.closest("dialog").close();
+    });
+});
