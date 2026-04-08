@@ -166,3 +166,43 @@ footer {
         flex: 1;
     }
 }
+
+#discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+/* Medium screens */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    #discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+    #discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+}
+
+.card img:hover {
+    filter: brightness(0.8) drop-shadow(0 0 5px #000);
+}
