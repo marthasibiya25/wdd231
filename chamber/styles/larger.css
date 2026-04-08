@@ -10,3 +10,13 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media screen and (min-width: 641px) {
+    .card {
+        padding: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+}
