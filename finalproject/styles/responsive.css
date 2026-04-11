@@ -1,10 +1,21 @@
 @media (max-width: 768px) {
-    nav {
-        display: block;
+
+    header {
+        flex-direction: column;
         text-align: center;
     }
 
-    #games-container {
-        grid-template-columns: 1fr;
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
