@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Games | GameVault</title>
+    <meta name="description" content="Browse a collection of 15+ video games with ratings, genres, and platforms.">
+    <meta name="author" content="Martha Sibiya">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/games.js"></script>
+
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>🎮 Game Library</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="form.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="games-container"></section>
+
+        <dialog id="modal">
+            <div id="modal-content"></div>
+            <button onclick="document.querySelector('#modal').close()">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GameVault</p>
+    </footer>
+</body>
+
+</html>

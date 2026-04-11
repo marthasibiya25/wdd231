@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Elden Ring",
+        "genre": "RPG",
+        "platform": "PC/PS5",
+        "rating": 9.5,
+        "image": "elden.jpg"
+    },
+    {
+        "id": 2,
+        "name": "God of War",
+        "genre": "Action",
+        "platform": "PS5",
+        "rating": 9.3,
+        "image": "gow.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Spider-Man 2",
+        "genre": "Action",
+        "platform": "PS5",
+        "rating": 9.6,
+        "image": "spider.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Minecraft",
+        "genre": "Sandbox",
+        "platform": "All",
+        "rating": 9.0,
+        "image": "mc.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Fortnite",
+        "genre": "Battle Royale",
+        "platform": "All",
+        "rating": 8.0,
+        "image": "fortnite.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Valorant",
+        "genre": "FPS",
+        "platform": "PC",
+        "rating": 8.8,
+        "image": "valo.jpg"
+    },
+    {
+        "id": 7,
+        "name": "GTA V",
+        "genre": "Open World",
+        "platform": "All",
+        "rating": 9.4,
+        "image": "gta.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Red Dead 2",
+        "genre": "Open World",
+        "platform": "All",
+        "rating": 9.7,
+        "image": "rdr2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "FIFA 24",
+        "genre": "Sports",
+        "platform": "All",
+        "rating": 8.3,
+        "image": "fifa.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Apex Legends",
+        "genre": "Battle Royale",
+        "platform": "All",
+        "rating": 8.6,
+        "image": "apex.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Cyberpunk",
+        "genre": "RPG",
+        "platform": "PC/PS5",
+        "rating": 8.2,
+        "image": "cyber.jpg"
+    },
+    {
+        "id": 12,
+        "name": "The Witcher 3",
+        "genre": "RPG",
+        "platform": "All",
+        "rating": 9.8,
+        "image": "witcher.jpg"
+    },
+    {
+        "id": 13,
+        "name": "CS2",
+        "genre": "FPS",
+        "platform": "PC",
+        "rating": 8.7,
+        "image": "cs2.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Hogwarts Legacy",
+        "genre": "Adventure",
+        "platform": "All",
+        "rating": 8.7,
+        "image": "hogwarts.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Starfield",
+        "genre": "Sci-Fi",
+        "platform": "Xbox/PC",
+        "rating": 8.1,
+        "image": "starfield.jpg"
+    }
+]
