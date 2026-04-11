@@ -169,14 +169,12 @@ footer {
 }
 
 .card {
-    border: 1px solid #ccc;
     padding: 1rem;
     background: white;
 }
 
 .card img {
     width: 100%;
-    height: auto;
 }
 
 /* HOVER EFFECT (NOT MOBILE) */
