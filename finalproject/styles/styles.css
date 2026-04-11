@@ -5,9 +5,11 @@ body {
     color: white;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     background: #111;
 }
@@ -18,27 +20,72 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
 .hero {
     text-align: center;
     padding: 3rem;
     background: linear-gradient(#111, #222);
 }
 
+/* GAME CARDS */
 .card {
     background: #1c1c26;
     padding: 1rem;
     margin: 1rem;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
 }
 
-#games-container {
+/* GRID CONTAINERS */
+#games-container,
+#featured {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 2rem;
+}
+
+/* FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2rem auto;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #4a4aff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2f2fff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    margin-top: 2rem;
 }
