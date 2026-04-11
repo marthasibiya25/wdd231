@@ -1,27 +1,44 @@
-import { itemsOfInterest } from './items.mjs';
+import { places } from "../data/places.mjs";
 
-const messageEl = document.getElementById('visitor-message');
-const lastVisit = localStorage.getItem('lastVisit');
-const now = Date.now();
+const container = document.querySelector("#cards-container");
+
+// Create cards
+places.forEach(place => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+    <h2>${place.name}</h2>
+    <figure>
+      <img src="${place.image}" alt="${place.name}">
+    </figure>
+    <address>${place.address}</address>
+    <p>${place.description}</p>
+    <button>Learn More</button>
+  `;
+
+    container.appendChild(card);
+});
+
+
+// ===== LOCAL STORAGE VISIT MESSAGE =====
+const message = document.querySelector("#visit-message");
+
+const lastVisit = localStorage.getItem("lastVisit");
+const currentVisit = Date.now();
 
 if (!lastVisit) {
-    messageEl.textContent = "Welcome! Let us know if you have any questions.";
+    message.textContent = "Welcome! Let us know if you have any questions.";
 } else {
-    const diffDays = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-    messageEl.textContent = diffDays < 1 ? "Back so soon! Awesome!" : `You last visited ${diffDays} ${diffDays === 1 ? 'day' : 'days'} ago.`;
-}
-localStorage.setItem('lastVisit', now);
+    const days = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
 
-const gridEl = document.getElementById('discover-grid');
-itemsOfInterest.forEach((item, index) => {
-    const card = document.createElement('div');
-    card.classList.add('card', `card${index + 1}`);
-    card.innerHTML = `
-        <h2>${item.name}</h2>
-        <figure><img src="${item.image}" alt="${item.name}"></figure>
-        <address>${item.address}</address>
-        <p>${item.description}</p>
-        <button>Learn More</button>
-    `;
-    gridEl.appendChild(card);
-});
+    if (days < 1) {
+        message.textContent = "Back so soon! Awesome!";
+    } else if (days === 1) {
+        message.textContent = "You last visited 1 day ago.";
+    } else {
+        message.textContent = `You last visited ${days} days ago.`;
+    }
+}
+
+localStorage.setItem("lastVisit", currentVisit);
