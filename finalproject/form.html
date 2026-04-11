@@ -1,39 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<form action="thankyou.html">
+    <h2>Feedback Form</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <label>Name</label>
+    <input type="text" required>
 
-    <title>Feedback | GameVault</title>
-    <meta name="description" content="Share your favorite games and feedback with GameVault.">
-    <meta name="author" content="Martha Sibiya">
+    <label>Email</label>
+    <input type="email" required>
 
-    <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="scripts/form.js"></script>
+    <label>Message</label>
+    <input type="text">
 
-    <link rel="icon" href="images/favicon.ico">
-</head>
-
-<body>
-    <header>
-        <h1>🎮 Feedback Form</h1>
-    </header>
-
-    <main>
-        <form id="favForm">
-            <label for="game">Favorite Game:</label>
-            <input type="text" id="game" required>
-
-            <button type="submit">Save</button>
-        </form>
-
-        <p id="saved"></p>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 GameVault</p>
-    </footer>
-</body>
-
-</html>
+    <button type="submit">Submit</button>
+</form>

@@ -1,40 +1,32 @@
+import games from "../data/games.json" assert { type: "json" };
+
 const container = document.querySelector("#games-container");
-const modal = document.querySelector("#modal");
-const modalContent = document.querySelector("#modal-content");
 
-async function loadGames() {
-    try {
-        const res = await fetch("data/games.json");
-        const games = await res.json();
+function displayGames(list) {
+    container.innerHTML = "";
 
-        games.forEach(game => {
-            const card = document.createElement("div");
-            card.classList.add("game-card");
+    list.forEach(game => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-            card.innerHTML = `
-                <h3>${game.name}</h3>
-                <p>${game.genre}</p>
-                <p>${game.platform}</p>
-                <p>⭐ ${game.rating}</p>
-                <button>View</button>
-            `;
+        card.innerHTML = `
+            <h3>${game.name}</h3>
+            <p>🎮 ${game.genre}</p>
+            <p>⭐ Rating: ${game.rating}</p>
+            <p>🕹️ ${game.platform}</p>
+            <button onclick="saveFavorite('${game.name}')">❤ Favorite</button>
+        `;
 
-            card.querySelector("button").addEventListener("click", () => {
-                modalContent.innerHTML = `
-                    <h2>${game.name}</h2>
-                    <p>Genre: ${game.genre}</p>
-                    <p>Platform: ${game.platform}</p>
-                    <p>Rating: ${game.rating}</p>
-                `;
-                modal.showModal();
-            });
-
-            container.appendChild(card);
-        });
-
-    } catch (error) {
-        console.error(error);
-    }
+        container.appendChild(card);
+    });
 }
 
-loadGames();
+displayGames(games);
+
+/* LOCAL STORAGE */
+window.saveFavorite = function (name) {
+    let favs = JSON.parse(localStorage.getItem("favorites")) || [];
+    favs.push(name);
+    localStorage.setItem("favorites", JSON.stringify(favs));
+    alert(name + " added to favorites!");
+};

@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #0f0f14;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #111;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(#111, #222);
+}
+
+.card {
+    background: #1c1c26;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
